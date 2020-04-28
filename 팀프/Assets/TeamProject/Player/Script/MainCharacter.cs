@@ -6,7 +6,7 @@ public class MainCharacter : MonoBehaviour
 {
     Animator animator;
 
-    public float speed = 0.05f;
+    public float speed = 5f;
 
     private bool canMoving = true;
 
@@ -16,7 +16,7 @@ public class MainCharacter : MonoBehaviour
     Rigidbody rigidbody;
     Vector3 vector3;
 
-    public int walkCount = 20;
+    public int walkCount = 5;
     private int currWalkCount = 0;
 
     void Awake()
@@ -41,7 +41,7 @@ public class MainCharacter : MonoBehaviour
                 transform.Translate(vector3.x * speed, 0, vector3.z * speed);
 
                 currWalkCount++;
-                yield return new WaitForSeconds(0.02f);
+                yield return new WaitForSeconds(0.07f);
             }
             currWalkCount = 0;
         }
