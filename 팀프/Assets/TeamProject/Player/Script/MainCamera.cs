@@ -6,9 +6,9 @@ public class MainCamera : MonoBehaviour
 {
     public GameObject player;
 
-    public float offsetX = 3.5f;
-    public float offsetY = 6.83f;
-    public float offsetZ = -3.79f;
+    public float offsetX = 68.4f;
+    public float offsetY = 62.2f;
+    public float offsetZ = -68.1f;
 
     public float followSpeed = 1f;
 
