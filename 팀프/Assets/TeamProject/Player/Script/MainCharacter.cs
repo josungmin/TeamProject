@@ -41,7 +41,7 @@ public class MainCharacter : MonoBehaviour
                 transform.Translate(vector3.x * speed, 0, vector3.z * speed);
 
                 currWalkCount++;
-                yield return new WaitForSeconds(0.03f);
+                yield return new WaitForSeconds(0.02f);
             }
             currWalkCount = 0;
         }
