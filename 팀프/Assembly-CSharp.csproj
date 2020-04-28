@@ -104,6 +104,14 @@
      <Compile Include="Assets\LowpolySimpleHouse\PostProcessing\Runtime\Utils\MaterialFactory.cs" />
      <Compile Include="Assets\LowpolySimpleHouse\PostProcessing\Runtime\Utils\RenderTextureFactory.cs" />
      <Compile Include="Assets\LowpolySimpleHouse\PostProcessing\Utilities\CustomMotionTexture\ExampleWheelController.cs" />
+     <Compile Include="Assets\TeamProject\Enemy\Script\Dragon.cs" />
+     <Compile Include="Assets\TeamProject\Enemy\Script\DragonState.cs" />
+     <Compile Include="Assets\TeamProject\Enemy\Script\Dragon_AttackState.cs" />
+     <Compile Include="Assets\TeamProject\Enemy\Script\Dragon_DamagedState.cs" />
+     <Compile Include="Assets\TeamProject\Enemy\Script\Dragon_DeadState.cs" />
+     <Compile Include="Assets\TeamProject\Enemy\Script\Dragon_IdleState.cs" />
+     <Compile Include="Assets\TeamProject\Enemy\Script\Dragon_MoveState.cs" />
+     <Compile Include="Assets\TeamProject\Enemy\Script\EnemyInfo.cs" />
      <None Include="Assets\LowpolySimpleHouse\PostProcessing\Resources\Shaders\ScreenSpaceReflection.shader" />
      <None Include="Assets\LowpolySimpleHouse\PostProcessing\Resources\Shaders\GrainGen.shader" />
      <None Include="Assets\LowpolySimpleHouse\PostProcessing\Editor Resources\Monitors\HistogramCompute.compute" />
