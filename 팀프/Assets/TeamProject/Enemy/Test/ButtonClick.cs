@@ -8,6 +8,6 @@ public class ButtonClick : MonoBehaviour
 {
     public void back()
     {
-        SceneManager.LoadScene("EnemyTest");
+        SceneManager.LoadScene("Mapping");
     }
 }
