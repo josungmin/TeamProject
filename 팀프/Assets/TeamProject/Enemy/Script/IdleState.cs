@@ -6,7 +6,7 @@ public class IdleState : EnemyState
 {
     private Enemy enemy;
 
-    public Transform target;
+    public MainCharacter player;
     public Vector3 direction;
 
     private Animator animator;
@@ -16,25 +16,20 @@ public class IdleState : EnemyState
         Debug.Log("Idle State");
         this.enemy = enemy;
         animator = enemy.GetComponent<Animator>();
+        player = GameObject.FindGameObjectWithTag("Player").GetComponent<MainCharacter>();
     }
 
     void EnemyState.Update()
     {
         animator.SetBool("isIdle", true);
-        target = GameObject.Find("Player").transform;
-        direction = (target.position - enemy.transform.position).normalized;
 
-        float distance = Vector3.Distance(target.position, enemy.transform.position);
-
-        // 플레이어와 마주칠 경우
-        /*
-        // 실행할것 구현
-        if (enemy.AttackRange <= distance && distance <= enemy.IdleRange)
+        // 플레이어의 움직임이 있을 경우     
+        if (player.horizontalMove != 0 || player.verticalMove != 0)
         {
-            // 다른상태로 이동
+            // 이동 상태로 전이
             enemy.SetState(new MoveState());
         }
-        */
+        
     }
 
     void EnemyState.OnExit()

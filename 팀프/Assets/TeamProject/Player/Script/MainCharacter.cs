@@ -10,8 +10,8 @@ public class MainCharacter : MonoBehaviour
 
     private bool canMoving = true;
 
-    float horizontalMove;
-    float verticalMove;
+    public float horizontalMove;
+    public float verticalMove;
 
     Rigidbody rigidbody;
     Vector3 vector3;
