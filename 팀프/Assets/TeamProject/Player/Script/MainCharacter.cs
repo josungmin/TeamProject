@@ -13,7 +13,7 @@ public class MainCharacter : MonoBehaviour
     public float horizontalMove;
     public float verticalMove;
 
-    Rigidbody rigidbody;
+    //Rigidbody rigidbody;
     Vector3 vector3;
 
     public int walkCount = 20;
@@ -21,7 +21,7 @@ public class MainCharacter : MonoBehaviour
 
     void Awake()
     {
-        rigidbody = GetComponent<Rigidbody>();
+        //rigidbody = GetComponent<Rigidbody>();
     }
 
     // Start is called before the first frame update

@@ -4,5 +4,11 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/TeamProject/Enemy/Test/EnemyTest.unity
+    guid: 2e503dbe20f31704496583113a497291
+  - enabled: 1
+    path: Assets/TeamProject/Enemy/Test/BattleScene.unity
+    guid: 0abdf12f7eb96e74da17aa1cb7354ec8
   m_configObjects: {}

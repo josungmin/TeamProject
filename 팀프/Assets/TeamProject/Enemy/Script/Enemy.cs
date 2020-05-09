@@ -4,13 +4,14 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-    public GameObject EnemyPrefab;
-
     private EnemyState currentState;
     private Vector3 Direction;
+    public bool isBattle;
 
     void Awake()
     {
+        isBattle = false;
+
         SetState(new IdleState());
     }
 
@@ -33,8 +34,17 @@ public class Enemy : MonoBehaviour
         currentState.OnEnter(this);
     }
 
-    public void destroyToDead()
+    void OnTriggerStay(Collider col)
     {
-        Destroy(EnemyPrefab);
+        if (col.gameObject.tag == "Player")
+        {
+            isBattle = true;
+        }
+        
+        if (col.gameObject.CompareTag("Player"))
+        {
+            isBattle = true;
+        }
+        
     }
 }

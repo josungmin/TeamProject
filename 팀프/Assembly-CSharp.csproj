@@ -112,6 +112,7 @@
      <Compile Include="Assets\TeamProject\Enemy\Script\EnemyState.cs" />
      <Compile Include="Assets\TeamProject\Enemy\Script\IdleState.cs" />
      <Compile Include="Assets\TeamProject\Enemy\Script\MoveState.cs" />
+     <Compile Include="Assets\TeamProject\Enemy\Test\ButtonClick.cs" />
      <Compile Include="Assets\TeamProject\Player\Script\MainCamera.cs" />
      <Compile Include="Assets\TeamProject\Player\Script\MainCharacter.cs" />
      <None Include="Assets\LowpolySimpleHouse\PostProcessing\Resources\Shaders\ScreenSpaceReflection.shader" />

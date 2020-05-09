@@ -7,7 +7,6 @@ public class IdleState : EnemyState
     private Enemy enemy;
 
     public MainCharacter player;
-    public Vector3 direction;
 
     private Animator animator;
 
@@ -21,7 +20,12 @@ public class IdleState : EnemyState
 
     void EnemyState.Update()
     {
-        animator.SetBool("isIdle", true);
+        //animator.SetBool("isIdle", true);
+
+        if(enemy.isBattle == true)
+        {
+            enemy.SetState(new AttackState());
+        }
 
         // 플레이어의 움직임이 있을 경우     
         if (player.horizontalMove != 0 || player.verticalMove != 0)
@@ -29,11 +33,10 @@ public class IdleState : EnemyState
             // 이동 상태로 전이
             enemy.SetState(new MoveState());
         }
-        
     }
 
     void EnemyState.OnExit()
     {
-        animator.SetBool("isIdle", false);
+        //animator.SetBool("isIdle", false);
     }
 }

@@ -7,17 +7,17 @@ public class MoveState : EnemyState
     private Enemy enemy;
     private Animator animator;
 
+    // 이동
     public bool isWalk;
     public Vector3 MovePoint;
     public int randNum;
-    public float speed = 0.05f;
 
     void EnemyState.OnEnter(Enemy enemy)
     {
         Debug.Log("Move State");
         this.enemy = enemy;
         animator = enemy.GetComponent<Animator>();
-        isWalk = true;
+        isWalk = true; 
 
         // 이동 방향 지정
         randNum = Random.RandomRange(0, 4);
@@ -42,7 +42,7 @@ public class MoveState : EnemyState
 
     void EnemyState.Update()
     {
-        animator.SetBool("isWalk", true);
+        //animator.SetBool("isWalk", true);
 
         // 랜덤으로 상하좌우 중 한곳을 한칸 이동
         if(isWalk)
@@ -71,23 +71,10 @@ public class MoveState : EnemyState
         {
             enemy.SetState(new IdleState());
         }
-        /*
-        // 실행할것 구현
-        if (distance >= enemy.IdleRange)
-        {
-            // 다른상태로 이동
-            enemy.SetState(new IdleState());
-        }
-        //공격범위안에 들어왔을 때
-        else if (enemy.AttackRange >= distance)
-        {
-            enemy.SetState(new AttackState());
-        }
-        */
     }
 
     void EnemyState.OnExit()
     {
-        animator.SetBool("isWalk", false);
+        //animator.SetBool("isWalk", false);
     }
 }
