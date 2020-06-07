@@ -14,20 +14,31 @@ public class BtnType : MonoBehaviour,IPointerExitHandler,IPointerEnterHandler
         defaultScale = buttonScale.localScale;
     }
 
+    bool isSound;
     public void OnBtnClick()
     {
         switch (currentType)
         {
             case BTNType.New:
-                Debug.Log("새 게임");
+                SceneLoader.LoadSceneHandle("Play", 0);
                 break;
             case BTNType.Continue:
-                Debug.Log("이어하기");
+                SceneLoader.LoadSceneHandle("Play", 1);
                 break;
             case BTNType.Sound:
-                Debug.Log("사운드");
+                if (isSound)
+                {
+                    isSound = !isSound;
+                    Debug.Log("Sound Off");
+                }
+                else
+                {
+                    isSound = !isSound;
+                    Debug.Log("Sound ON");
+                }
                 break;
             case BTNType.Quit:
+                Application.Quit();
                 Debug.Log("그만두기");
                 break;
         }

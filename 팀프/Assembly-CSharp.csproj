@@ -123,9 +123,13 @@
     <Compile Include="Assets\TeamProject\Player\Script\MainCamera.cs" />
     <Compile Include="Assets\TeamProject\Player\Script\MainCharacter.cs" />
     <Compile Include="Assets\TeamProject\UI\BtnType.cs" />
+    <Compile Include="Assets\TeamProject\UI\ClickSound.cs" />
+    <Compile Include="Assets\TeamProject\UI\LoadingScene.cs" />
     <Compile Include="Assets\TeamProject\UI\MainMenu.cs" />
     <Compile Include="Assets\TeamProject\UI\MainUI.cs" />
-    <Compile Include="Assets\TeamProject\UI\NewBehaviourScript.cs" />
+    <Compile Include="Assets\TeamProject\UI\Main_.cs" />
+    <Compile Include="Assets\TeamProject\UI\SceneLoader.cs" />
+    <Compile Include="Assets\TeamProject\UI\btnFX.cs" />
     <None Include="Assets\LowpolySimpleHouse\PostProcessing\Resources\Shaders\ScreenSpaceReflection.shader" />
     <None Include="Assets\LowpolySimpleHouse\PostProcessing\Resources\Shaders\GrainGen.shader" />
     <None Include="Assets\LowpolySimpleHouse\PostProcessing\Editor Resources\Monitors\HistogramCompute.compute" />

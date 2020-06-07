@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum BTNType
+public enum BTNType_
 {
     New,
     Continue,

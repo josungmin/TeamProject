@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/TeamProject/Scenes/Mapping.unity
+- path: Assets/TeamProject/Scenes/MainMenu.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0
