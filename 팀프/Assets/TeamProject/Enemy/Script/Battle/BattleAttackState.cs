@@ -21,6 +21,8 @@ public class BattleAttackState : BattleEnemyState
     void BattleEnemyState.Update()
     {
         animator.SetBool("isAttack", true);
+
+        enemy.PlayAttackSound();
         // 몬스터 공격 소리 여기다가 적어주세요
         //////////
         //////////

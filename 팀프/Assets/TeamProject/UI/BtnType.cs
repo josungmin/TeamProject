@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.SceneManagement;
 
 public class BtnType : MonoBehaviour,IPointerExitHandler,IPointerEnterHandler
 {
@@ -16,17 +17,24 @@ public class BtnType : MonoBehaviour,IPointerExitHandler,IPointerEnterHandler
         defaultScale = buttonScale.localScale;
     }
 
+    //PlayerPrefs.DeleteAll();
+
     bool isSound;
     public void OnBtnClick()
     {
         switch (currentType)
         {
             case BTNType.New:
-                SceneLoader.LoadSceneHandle("Play", 0);
-                break;
+                {
+                    PlayerPrefs.DeleteAll();
+                    SceneManager.LoadScene("Opening");
+                    break;
+                }          
             case BTNType.Continue:
-                SceneLoader.LoadSceneHandle("Play", 1);
-                break;
+                {
+                    SceneManager.LoadScene("Opening");
+                    break;
+                }
             case BTNType.Sound:
                 CanvasGroupOn(OptionGroup);
                 CanvasGroupOff(mainGroup);

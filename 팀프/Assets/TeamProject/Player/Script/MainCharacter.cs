@@ -24,46 +24,34 @@ public class MainCharacter : MonoBehaviour
     public int Pre_Player_Hp;
     public Slider Hp_bar;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     [SerializeField] GameObject You_Lose_;
 
-=======
->>>>>>> 9917ec09d0694e070d5c56c752e20a99f480dce6
-=======
-    [SerializeField] GameObject You_Lose_;
+    AudioSource aud;
+    public AudioSource audioSource; //출력 관련 
+    public AudioClip walk; 
 
->>>>>>> 50b01b3e234fd1f44560b9ec1a0b2da6a49df1f2
     void Awake()
     {
         //rigidbody = GetComponent<Rigidbody>();
         animator = GetComponent<Animator>();
-        // 임시
-        PlayerPrefs.SetInt("PlayerHP", 100);
-        PlayerPrefs.Save();
+
+        aud = GetComponent<AudioSource>();
+        audioSource = GetComponent<AudioSource>();
     }
 
     // Start is called before the first frame update
     void Start()
     {
-<<<<<<< HEAD
-        if (!PlayerPrefs.HasKey("PlayerHP"))
-=======
         // 위치 불러오기
         this.transform.position = new Vector3(PlayerPrefs.GetFloat("playerXpos", 44.0f), PlayerPrefs.GetFloat("playerYpos", 1.0f), PlayerPrefs.GetFloat("playerZpos", 28.0f));
 
         // HP 불러오기
         if(!PlayerPrefs.HasKey("PlayerHP"))
->>>>>>> 9917ec09d0694e070d5c56c752e20a99f480dce6
         {
             PlayerPrefs.SetInt("PlayerHP", 100);
             PlayerPrefs.Save();
         }
-<<<<<<< HEAD
-
-=======
            
->>>>>>> 9917ec09d0694e070d5c56c752e20a99f480dce6
         Player_Hp = PlayerPrefs.GetInt("PlayerHP", 100);
         Pre_Player_Hp = Player_Hp;
 
@@ -80,6 +68,9 @@ public class MainCharacter : MonoBehaviour
             {
                 transform.Translate(vector3.x * speed, 0, vector3.z * speed);
 
+                if (!aud.isPlaying)
+                    aud.PlayOneShot(walk);
+
                 currWalkCount++;
                 yield return new WaitForSeconds(0.02f);
             }
@@ -92,11 +83,7 @@ public class MainCharacter : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-<<<<<<< HEAD
-        if (this.transform.position.y < -3.0f)
-=======
         if(this.transform.position.y < -3.0f)
->>>>>>> 9917ec09d0694e070d5c56c752e20a99f480dce6
         {
             this.transform.position = new Vector3(44.0f, 1.0f, 28.0f);
 
@@ -108,15 +95,14 @@ public class MainCharacter : MonoBehaviour
 
         AnimatonUpdate();
         HpUpdate();
-<<<<<<< HEAD
-=======
         PositionUpdate();
 
+        /*
         if (Input.GetKeyDown(KeyCode.L))
         {
             PlayerPrefs.DeleteAll();
         }
->>>>>>> 9917ec09d0694e070d5c56c752e20a99f480dce6
+        */
     }
 
     void FixedUpdate()
@@ -128,16 +114,6 @@ public class MainCharacter : MonoBehaviour
         }
     }
 
-<<<<<<< HEAD
-    void HpUpdate()
-    {
-        if (Player_Hp <= 0)
-        {
-            You_Lose_.SetActive(true);
-        }
-
-        if (Player_Hp < Pre_Player_Hp)
-=======
     void PositionUpdate()
     {
         if(canMoving)
@@ -158,7 +134,6 @@ public class MainCharacter : MonoBehaviour
         }
 
         if(Player_Hp < Pre_Player_Hp)
->>>>>>> 9917ec09d0694e070d5c56c752e20a99f480dce6
         {
             PlayerPrefs.SetInt("PlayerHP", Player_Hp);
             PlayerPrefs.Save();

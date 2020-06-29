@@ -20,6 +20,7 @@ public class BattleDeadState : BattleEnemyState
 
     void BattleEnemyState.Update()
     {
+        enemy.PlayDeadSound();
         // 몬스터 죽는소리 여기에 적어주세요.
         //animator.SetBool("isDead", true);
 

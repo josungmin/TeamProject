@@ -16,6 +16,8 @@ TagManager:
   - Enemy3
   - Enemy4
   - Enemy5
+  - HealthPotion
+  - SkillPotion
   layers:
   - Default
   - TransparentFX
@@ -25,8 +27,8 @@ TagManager:
   - UI
   - 
   - 
-  - 
-  - 
+  - Player
+  - Enemy
   - 
   - 
   - 
@@ -52,4 +54,16 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: bg
+    uniqueID: 831278625
+    locked: 0
+  - name: fade
+    uniqueID: 1989117055
+    locked: 0
+  - name: dialogbox
+    uniqueID: 1256635951
+    locked: 0
+  - name: text
+    uniqueID: 1259714913
     locked: 0

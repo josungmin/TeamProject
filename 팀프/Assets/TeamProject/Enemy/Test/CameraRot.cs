@@ -17,17 +17,10 @@ public class CameraRot : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        PressAnyKey();
+        
 
         y += Time.deltaTime * speed;
         transform.rotation = Quaternion.Euler(0, y, 0);
     }
 
-    void PressAnyKey()
-    {
-        if(Input.anyKeyDown)
-        {
-            SceneManager.LoadScene("MainMenu");
-        }
-    }
 }

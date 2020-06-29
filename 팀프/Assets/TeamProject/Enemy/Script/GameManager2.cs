@@ -20,19 +20,22 @@ public class GameManager2 : MonoBehaviour
     void Start()
     {
         pre_Turn = current_Turn;
-        player_turn.gameObject.SetActive(false);
+        player_turn.gameObject.SetActive(true);
         enemy_turn.gameObject.SetActive(false);
+
+        Invoke("SetFalsePlayer", 1.0f);
     }
 
     // Update is called once per frame
     void Update()
-    {
-        /*
+    {     
         if(pre_Turn != current_Turn)
         {
             SetImg();
-        }
-        */
+            pre_Turn = current_Turn;
+
+
+        }       
     }
 
     void SetImg()
@@ -63,5 +66,10 @@ public class GameManager2 : MonoBehaviour
         {
             enemy_turn.gameObject.SetActive(false);
         }
+    }
+
+    void SetFalsePlayer()
+    {
+        player_turn.gameObject.SetActive(false);
     }
 }

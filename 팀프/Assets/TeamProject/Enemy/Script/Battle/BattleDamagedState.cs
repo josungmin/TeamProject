@@ -25,6 +25,7 @@ public class BattleDamagedState : BattleEnemyState
     void BattleEnemyState.Update()
     {
         animator.SetBool("isDamaged", true);
+        enemy.PlayDamagedSound();
         // 몬스터 피격 소리 여기에다가 적어주세요.
         
         // HP가 0 이하가 된다면 dead 상태로 전이

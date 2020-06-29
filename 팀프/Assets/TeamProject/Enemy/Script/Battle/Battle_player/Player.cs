@@ -23,18 +23,28 @@ public class Player : MonoBehaviour
 
     public Slider Hp_bar;
 
+    AudioSource aud;
+    public AudioSource audioSource; //출력 관련 
+
+    public AudioClip sk1;  //구르기
+    public AudioClip sk2;  //걷기
+    public AudioClip sk3; // 펄스건 기본
+    public AudioClip sk4; // 펄스건 기본
+    public AudioClip damagedSound;
+
     void Awake()
     {
         animator = gameObject.GetComponent<Animator>();
         Cur_player_hp = PlayerPrefs.GetInt("PlayerHP", 100);
         pre_player_hp = Cur_player_hp;
+
+        aud = GetComponent<AudioSource>();
+        audioSource = GetComponent<AudioSource>();
     }
 
     // Start is called before the first frame update
     void Start()
     {
-
-
         select = 0;
         my_turn = true;
     }
@@ -90,6 +100,9 @@ public class Player : MonoBehaviour
         GameObject spell = spellPrefab[0]; //test
         Skill_1 s = Instantiate(spell, Attack_Pos.transform.position, spell.transform.rotation).GetComponent<Skill_1>();
 
+        if (!aud.isPlaying)
+            aud.PlayOneShot(sk1);
+
         yield return new WaitForSeconds(0.8f); //이펙트 애니메이션 재생 시간
 
         StopSkill_1();
@@ -115,6 +128,9 @@ public class Player : MonoBehaviour
 
         GameObject spell = spellPrefab[1]; //test
         Skill_1 s = Instantiate(spell, Attack_Pos.transform.position, spell.transform.rotation).GetComponent<Skill_1>();
+
+        if (!aud.isPlaying)
+            aud.PlayOneShot(sk2);
 
         yield return new WaitForSeconds(0.8f); //이펙트 애니메이션 재생 시간
 
@@ -142,6 +158,9 @@ public class Player : MonoBehaviour
         GameObject spell = spellPrefab[2]; //test
         Skill_1 s = Instantiate(spell, Attack_Pos.transform.position, spell.transform.rotation).GetComponent<Skill_1>();
 
+        if (!aud.isPlaying)
+            aud.PlayOneShot(sk3);
+
         yield return new WaitForSeconds(1.0f); //이펙트 애니메이션 재생 시간
 
         StopSkill_3();
@@ -167,6 +186,9 @@ public class Player : MonoBehaviour
 
         GameObject spell = spellPrefab[3]; //test
         Skill_1 s = Instantiate(spell, Attack_Pos.transform.position, spell.transform.rotation).GetComponent<Skill_1>();
+
+        if (!aud.isPlaying)
+            aud.PlayOneShot(sk4);
 
         yield return new WaitForSeconds(1.0f); //이펙트 애니메이션 재생 시간
 
@@ -228,6 +250,8 @@ public class Player : MonoBehaviour
         if(Cur_player_hp < pre_player_hp)
         {
             // 플레이어 피격 소리 여기다가 적어주세요.
+            if (!aud.isPlaying)
+                aud.PlayOneShot(damagedSound);
 
             Hp_bar.value = Cur_player_hp;
             pre_player_hp = Cur_player_hp;
