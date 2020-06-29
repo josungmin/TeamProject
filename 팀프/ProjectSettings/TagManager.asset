@@ -61,6 +61,15 @@ TagManager:
   - name: fade
     uniqueID: 1989117055
     locked: 0
+  - name: character
+    uniqueID: 1536848999
+    locked: 0
+  - name: character2
+    uniqueID: 1917677261
+    locked: 0
+  - name: character3
+    uniqueID: 3922721063
+    locked: 0
   - name: dialogbox
     uniqueID: 1256635951
     locked: 0
