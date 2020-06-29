@@ -618,7 +618,7 @@ RectTransform:
   m_GameObject: {fileID: 773998760}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.8758339, y: 0.8758339, z: 0.8758339}
   m_Children: []
   m_Father: {fileID: 130213427}
   m_RootOrder: 3
@@ -1424,7 +1424,7 @@ MonoBehaviour:
   - dialogue: "\"\uADF8\uB9AC\uACE0 \uB0B4\uAC00 \uB108\uB97C \uC774 \uB3D9\uAD74\uB85C
       \uC62E\uACA8 \uC654\uC9C0.\""
     bg: {fileID: 21300000, guid: 15226a05bd0abec49a0457791438b963, type: 3}
-  - dialogue: "\"\uB450\uB824\uC6CC\uD560 \uD544\uC694 \uC5C6\uB2E8\uB2E4. \uB09C
+  - dialogue: "\"\uB450\uB824\uC6CC\uD560 \uD544\uC694 \uC5C6\uB2E8\uB2E4. \n\uB09C
       \uB110 \uC7A1\uC544\uBA39\uAC70\uB098 \uD558\uC9C0 \uC54A\uC544.\""
     bg: {fileID: 21300000, guid: 15226a05bd0abec49a0457791438b963, type: 3}
   - dialogue: '"......"'

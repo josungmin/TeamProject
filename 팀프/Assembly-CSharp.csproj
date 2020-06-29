@@ -11,7 +11,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{099AE7A3-CFC8-B73D-876A-16F851BFC226}</ProjectGuid>
+    <ProjectGuid>{57FA7367-E563-F6CB-742A-0B24EEE9D155}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -283,31 +283,31 @@
     <None Include="Assets\TeamProject\Enemy\메인 맵\미니맵\MarkerTexture.shader" />
     <None Include="Assets\TextMesh Pro\Examples &amp; Extras\Fonts\Bangers - OFL.txt" />
     <Reference Include="Unity.Timeline.Editor">
-      <HintPath>C:/Users/park9/Desktop/temp/팀프 현재 버젼/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
+      <HintPath>C:/Users/park9/Desktop/학업/팀프로젝트/기말 프로젝트/TeamProject/팀프/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VSCode.Editor">
-      <HintPath>C:/Users/park9/Desktop/temp/팀프 현재 버젼/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
+      <HintPath>C:/Users/park9/Desktop/학업/팀프로젝트/기말 프로젝트/TeamProject/팀프/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
-      <HintPath>C:/Users/park9/Desktop/temp/팀프 현재 버젼/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+      <HintPath>C:/Users/park9/Desktop/학업/팀프로젝트/기말 프로젝트/TeamProject/팀프/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UI">
-      <HintPath>C:/Users/park9/Desktop/temp/팀프 현재 버젼/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+      <HintPath>C:/Users/park9/Desktop/학업/팀프로젝트/기말 프로젝트/TeamProject/팀프/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Timeline">
-      <HintPath>C:/Users/park9/Desktop/temp/팀프 현재 버젼/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
+      <HintPath>C:/Users/park9/Desktop/학업/팀프로젝트/기말 프로젝트/TeamProject/팀프/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
     </Reference>
     <Reference Include="Unity.CollabProxy.Editor">
-      <HintPath>C:/Users/park9/Desktop/temp/팀프 현재 버젼/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
+      <HintPath>C:/Users/park9/Desktop/학업/팀프로젝트/기말 프로젝트/TeamProject/팀프/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Rider.Editor">
-      <HintPath>C:/Users/park9/Desktop/temp/팀프 현재 버젼/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
+      <HintPath>C:/Users/park9/Desktop/학업/팀프로젝트/기말 프로젝트/TeamProject/팀프/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
-      <HintPath>C:/Users/park9/Desktop/temp/팀프 현재 버젼/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+      <HintPath>C:/Users/park9/Desktop/학업/팀프로젝트/기말 프로젝트/TeamProject/팀프/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.UI">
-      <HintPath>C:/Users/park9/Desktop/temp/팀프 현재 버젼/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+      <HintPath>C:/Users/park9/Desktop/학업/팀프로젝트/기말 프로젝트/TeamProject/팀프/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.3.11f1/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
@@ -843,7 +843,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
-      <Project>{42418AB4-7157-37AA-D538-B6386A5D5E36}</Project>
+      <Project>{53BCC3CF-8F4F-F810-46E3-878526F6B5DD}</Project>
       <Name>Assembly-CSharp-firstpass</Name>
     </ProjectReference>
   </ItemGroup>
