@@ -11,15 +11,11 @@ public class Dialogue
     [TextArea]
     public string dialogue;
     public Sprite bg;
-    public Sprite character1;
-    public Sprite character2;
 }
 
 public class eventdrive : MonoBehaviour
 {
     [SerializeField] private SpriteRenderer bg;
-    [SerializeField] private SpriteRenderer character1;
-    [SerializeField] private SpriteRenderer character2;
     [SerializeField] private Text textDialog;
 
     private bool isDialog = false;
@@ -38,10 +34,11 @@ public class eventdrive : MonoBehaviour
     [SerializeField] private Dialogue[] dialogues;
 
     public FadeManager fader;
+    public FadeManager bg2;
     public FadeManager dialBoxFader;
-    //public FadeManager character1Fader;
-    //public FadeManager character2Fader;
-    //public FadeManager character3Fader;
+    public FadeManager character1Fader;
+    public FadeManager character2Fader;
+    public FadeManager character3Fader;
     public AudioPlay bgplayer;
 
     private void OnOff(bool _flag)
@@ -64,8 +61,6 @@ public class eventdrive : MonoBehaviour
     {
         textDialog.text = dialogues[count].dialogue;
         bg.sprite = dialogues[count].bg;
-        character1.sprite = dialogues[count].character1;
-        character2.sprite = dialogues[count].character2;
         count++;
     }
 
@@ -118,12 +113,12 @@ public class eventdrive : MonoBehaviour
             if (!fadevent3)
             {
                 StartCoroutine(FadeinDialogue());
-                //StartCoroutine(FadeinCharacter1());
-                //StartCoroutine(FadeinCharacter2());
+                StartCoroutine(FadeinCharacter1());
+                StartCoroutine(FadeinCharacter2());
                 fadevent3 = true;
             }
         }
-        /*
+        
         if (count == 6)
         {
             if (!fadevent8)
@@ -133,15 +128,15 @@ public class eventdrive : MonoBehaviour
                 fadevent8 = true;
             }
         }
-        */
+        
         //장면 전환
         if (count == 19)
         {
             if (!fadevent4)
             {
-                //StartCoroutine(FadeoutCharacter1());
-                //StartCoroutine(FadeoutCharacter3());
-                StartCoroutine(exchaingeBG());
+                StartCoroutine(FadeoutCharacter1());
+                StartCoroutine(FadeoutCharacter3());
+                StartCoroutine(FadeinBG2());
                 fadevent4 = true;
             }
         }
@@ -149,9 +144,9 @@ public class eventdrive : MonoBehaviour
         {
             if (!fadevent5)
             {
-                StartCoroutine(exchaingeBG());
-                //StartCoroutine(FadeinCharacter1());
-                //StartCoroutine(FadeinCharacter3());
+                StartCoroutine(FadeoutBG2());
+                StartCoroutine(FadeinCharacter1());
+                StartCoroutine(FadeinCharacter3());
                 fadevent5 = true;
             }
         }
@@ -162,8 +157,8 @@ public class eventdrive : MonoBehaviour
             {
                 StartCoroutine(Fadeout());
                 StartCoroutine(FadeoutDialogue());
-                //StartCoroutine(FadeoutCharacter1());
-                //StartCoroutine(FadeoutCharacter3());
+                StartCoroutine(FadeoutCharacter1());
+                StartCoroutine(FadeoutCharacter3());
                 fadevent6 = true;
             }
         }
@@ -173,12 +168,11 @@ public class eventdrive : MonoBehaviour
     {
         fader.FadeIn(2f);
         yield return new WaitForSeconds(5f);
-        fader.FadeOut(4f);
     }
     //fade out bg1
     IEnumerator FadeoutBG()
     {
-        fader.FadeOut(4f);
+        fader.FadeOut(2f);
         yield return new WaitForSeconds(5f);
     }
     //fade in bg2
@@ -212,42 +206,54 @@ public class eventdrive : MonoBehaviour
         dialBoxFader.FadeIn(1f);
         yield return new WaitForSeconds(2f);
     }
-    /*
+    //fade in bg2
+    IEnumerator FadeinBG2()
+    {
+        bg2.FadeOut(1f);
+        yield return new WaitForSeconds(1f);
+    }
+    //fade out bg2
+    IEnumerator FadeoutBG2()
+    {
+        bg2.FadeIn(1f);
+        yield return new WaitForSeconds(1f);
+    }
+    
     //fade in Character1
     IEnumerator FadeinCharacter1()
     {
-        character1Fader.FadeIn(1f);
+        character1Fader.FadeOut(1f);
         yield return new WaitForSeconds(2f);
     }
     //fade in Character2
     IEnumerator FadeinCharacter2()
     {
-        character2Fader.FadeIn(1f);
+        character2Fader.FadeOut(1f);
         yield return new WaitForSeconds(2f);
     }
     //fade in Character3
     IEnumerator FadeinCharacter3()
     {
-        character3Fader.FadeIn(1f);
+        character3Fader.FadeOut(1f);
         yield return new WaitForSeconds(2f);
     }
     //fade out Character1
     IEnumerator FadeoutCharacter1()
     {
-        character1Fader.FadeOut(1f);
+        character1Fader.FadeIn(1f);
         yield return new WaitForSeconds(2f);
     }
     //fade out Character2
     IEnumerator FadeoutCharacter2()
     {
-        character2Fader.FadeOut(1f);
+        character2Fader.FadeIn(1f);
         yield return new WaitForSeconds(2f);
     }
     //fade out Character3
     IEnumerator FadeoutCharacter3()
     {
-        character3Fader.FadeOut(1f);
+        character3Fader.FadeIn(1f);
         yield return new WaitForSeconds(2f);
     }
-    */
+    
 }
