@@ -27,12 +27,12 @@ public class BtnType : MonoBehaviour,IPointerExitHandler,IPointerEnterHandler
             case BTNType.New:
                 {
                     PlayerPrefs.DeleteAll();
-                    SceneManager.LoadScene("Opening");
+                    SceneManager.LoadScene("Loading");
                     break;
                 }          
             case BTNType.Continue:
                 {
-                    SceneManager.LoadScene("Opening");
+                    SceneManager.LoadScene("Loading");
                     break;
                 }
             case BTNType.Sound:

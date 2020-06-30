@@ -12,12 +12,12 @@ EditorBuildSettings:
     path: Assets/TeamProject/Scenes/Loading.unity
     guid: 217c82825646b284694da441b3c9a4f2
   - enabled: 1
+    path: Assets/TeamProject/Scenes/Opening.unity
+    guid: a25f40064d09e6d409840caec26d65b3
+  - enabled: 1
     path: Assets/TeamProject/Scenes/MainSceneF.unity
     guid: 3bcd3ddc52cd49341aeaa3509f1339e5
   - enabled: 1
     path: Assets/TeamProject/Scenes/BattleScene.unity
     guid: 0abdf12f7eb96e74da17aa1cb7354ec8
-  - enabled: 1
-    path: Assets/TeamProject/Opening/Opening.unity
-    guid: a25f40064d09e6d409840caec26d65b3
   m_configObjects: {}
