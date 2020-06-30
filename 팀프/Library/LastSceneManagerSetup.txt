@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/TeamProject/Scenes/MainSceneF.unity
+- path: Assets/TeamProject/Scenes/Opening.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0

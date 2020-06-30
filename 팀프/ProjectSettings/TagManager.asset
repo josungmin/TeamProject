@@ -58,6 +58,9 @@ TagManager:
   - name: bg
     uniqueID: 831278625
     locked: 0
+  - name: bg2
+    uniqueID: 3752261427
+    locked: 0
   - name: fade
     uniqueID: 1989117055
     locked: 0
